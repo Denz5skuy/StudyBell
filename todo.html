@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyBell Todo</title>
+
+<link rel="stylesheet" href="todo.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>To Do List</h1>
+
+<div class="form">
+
+<input id="title" placeholder="Judul tugas">
+<input id="subject" placeholder="Mata pelajaran">
+<input id="teacher" placeholder="Guru">
+<input type="date" id="deadline">
+
+<button onclick="addTask()">Tambah</button>
+
+</div>
+
+<div id="taskList"></div>
+
+</div>
+
+<nav class="bottom-nav">
+
+    <a href="dashboard.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="todo.html" class="active">
+        <i class="fa-solid fa-list-check"></i>
+        <span>To-Do</span>
+    </a>
+
+    <a href="alarm.html">
+        <i class="fa-solid fa-bell"></i>
+        <span>Alarm</span>
+    </a>
+
+    <a href="riwayat.html">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>Riwayat</span>
+    </a>
+
+    <a href="profile.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Profil</span>
+    </a>
+
+</nav>
+
+<script src="todo.js"></script>
+
+</body>
+</html>

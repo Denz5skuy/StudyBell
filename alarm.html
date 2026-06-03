@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyBell Alarm</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="alarm.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<h2>Alarm Belajar</h2>
+
+<div class="card">
+
+<input id="subject" placeholder="Mata pelajaran">
+<input id="task" placeholder="Tugas">
+
+<div class="row">
+<input id="hour" placeholder="HH">
+<span>:</span>
+<input id="minute" placeholder="MM">
+
+<select id="period">
+<option>AM</option>
+<option>PM</option>
+</select>
+</div>
+
+<select id="repeat" onchange="toggleDays()">
+<option value="daily">Setiap Hari</option>
+<option value="custom">Hari Tertentu</option>
+</select>
+
+<div id="daysBox" class="days hide">
+<label><input type="checkbox" value="Mon">Sen</label>
+<label><input type="checkbox" value="Tue">Sel</label>
+<label><input type="checkbox" value="Wed">Rab</label>
+<label><input type="checkbox" value="Thu">Kam</label>
+<label><input type="checkbox" value="Fri">Jum</label>
+<label><input type="checkbox" value="Sat">Sab</label>
+<label><input type="checkbox" value="Sun">Min</label>
+</div>
+
+<button onclick="addAlarm()">+ Tambah</button>
+
+</div>
+
+<div id="list"></div>
+
+</div>
+
+<script src="alarm.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBell Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div>
+            <h1 id="greeting">Hai 👋</h1>
+            <p>Semangat belajar hari ini!</p>
+        </div>
+
+        <div class="notification">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+
+    </header>
+
+    <section class="deadline-card">
+
+        <div class="deadline-title">
+            Deadline Terdekat
+        </div>
+
+        <div id="deadlineContent">
+
+            <h3>📚 Belum Ada Tugas</h3>
+
+            <p>
+                Tambahkan tugas pertamamu yuk!
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="menu-grid">
+
+        <a href="todo.html" class="menu-card">
+            <i class="fa-solid fa-list-check"></i>
+            <span>To-Do</span>
+        </a>
+
+        <a href="alarm.html" class="menu-card">
+            <i class="fa-solid fa-bell"></i>
+            <span>Alarm</span>
+        </a>
+
+        <a href="riwayat.html" class="menu-card">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>Riwayat</span>
+        </a>
+
+        <a href="profile.html" class="menu-card">
+            <i class="fa-solid fa-user"></i>
+            <span>Profil</span>
+        </a>
+
+    </section>
+
+    <section class="summary-card">
+
+        <h2>Ringkasan Tugas</h2>
+
+        <div class="summary-grid">
+
+            <div class="summary-item">
+                <h3 id="pendingCount">0</h3>
+                <p>Belum Selesai</p>
+            </div>
+
+            <div class="summary-item">
+                <h3 id="completedCount">0</h3>
+                <p>Selesai</p>
+            </div>
+
+            <div class="summary-item">
+                <h3 id="lateCount">0</h3>
+                <p>Terlambat</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="task-card">
+
+        <div class="task-header">
+
+            <h2>Tugas Mendatang</h2>
+
+            <a href="todo.html">
+                Tambah
+            </a>
+
+        </div>
+
+        <div id="taskContainer">
+
+            <div class="empty-task">
+
+                <h3>📋 Belum Ada Tugas</h3>
+
+                <p>
+                    Yuk mulai produktif!
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<nav class="bottom-nav">
+
+    <a href="dashboard.html" class="active">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="todo.html">
+        <i class="fa-solid fa-list-check"></i>
+        <span>To-Do</span>
+    </a>
+
+    <a href="alarm.html" target="alarm.html">
+        <i class="fa-solid fa-bell"></i>
+        <span>Alarm</span>
+    </a>
+
+    <a href="riwayat.html">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>Riwayat</span>
+    </a>
+
+    <a href="profile.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Profil</span>
+    </a>
+
+</nav>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
