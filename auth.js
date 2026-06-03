@@ -44,7 +44,7 @@ if (registerForm) {
 
         alert("Akun berhasil dibuat!");
 
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     });
 }
 
