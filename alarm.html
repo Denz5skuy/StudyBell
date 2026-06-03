@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyBell - Alarm</title>
+
+<link rel="stylesheet" href="alarm.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <div>
+            <h2>Alarm Belajar</h2>
+            <p>Kelola jadwal belajar dan tugasmu</p>
+        </div>
+
+        <button class="add-btn" onclick="openModal()">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+
+    </div>
+
+    <!-- TAB -->
+    <div class="tabs">
+
+        <button class="tab active">
+            Semua
+        </button>
+
+    </div>
+
+    <!-- LIST ALARM -->
+    <div id="alarmList"></div>
+
+</div>
+
+<!-- MODAL TAMBAH ALARM -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <h3>Tambah Alarm</h3>
+
+        <input
+        type="text"
+        id="subject"
+        placeholder="Mata Pelajaran">
+
+        <input
+        type="text"
+        id="task"
+        placeholder="Tugas">
+
+        <!-- JAM -->
+
+        <div class="time-box">
+
+            <input
+            type="number"
+            id="hour"
+            placeholder="HH"
+            min="1"
+            max="12">
+
+            <span>:</span>
+
+            <input
+            type="number"
+            id="minute"
+            placeholder="MM"
+            min="0"
+            max="59">
+
+            <select id="period">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+
+        </div>
+
+        <!-- REPEAT -->
+
+        <select
+        id="repeat"
+        onchange="toggleDays()">
+
+            <option value="daily">
+                Setiap Hari
+            </option>
+
+            <option value="custom">
+                Hari Tertentu
+            </option>
+
+        </select>
+
+        <!-- HARI -->
+
+        <div class="days" id="daysBox" style="display:none;">
+
+            <label>
+                <input type="checkbox" value="Sen">
+                Sen
+            </label>
+
+            <label>
+                <input type="checkbox" value="Sel">
+                Sel
+            </label>
+
+            <label>
+                <input type="checkbox" value="Rab">
+                Rab
+            </label>
+
+            <label>
+                <input type="checkbox" value="Kam">
+                Kam
+            </label>
+
+            <label>
+                <input type="checkbox" value="Jum">
+                Jum
+            </label>
+
+            <label>
+                <input type="checkbox" value="Sab">
+                Sab
+            </label>
+
+            <label>
+                <input type="checkbox" value="Min">
+                Min
+            </label>
+
+        </div>
+
+        <div class="modal-buttons">
+
+            <button
+            class="save-btn"
+            onclick="addAlarm()">
+
+            Simpan
+
+            </button>
+
+            <button
+            class="cancel-btn"
+            onclick="closeModal()">
+
+            Batal
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="bottom-nav">
+
+    <a href="dashboard.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="todo.html">
+        <i class="fa-solid fa-list-check"></i>
+        <span>To-Do</span>
+    </a>
+
+    <a href="alarm.html" class="active">
+        <i class="fa-solid fa-bell"></i>
+        <span>Alarm</span>
+    </a>
+
+    <a href="riwayat.html">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>Riwayat</span>
+    </a>
+
+    <a href="profile.html">
+        <i class="fa-solid fa-user"></i>
+        <span>Profil</span>
+    </a>
+
+</nav>
+
+<script src="alarm.js"></script>
+
+</body>
+</html>
